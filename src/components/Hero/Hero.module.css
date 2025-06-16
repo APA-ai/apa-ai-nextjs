@@ -1,0 +1,372 @@
+.heroContainer {
+  padding: 0;
+  background: linear-gradient(135deg, #3f1f94 0%, #673AB7 60%, #ffb3b3 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.heroContent {
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.titleSpan {
+  display: block;
+  color: #FFD54F;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categoryButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.categoryButton {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.categoryButton:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.toolsRow {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.toolButton {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.toolButton:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.backgroundShape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  border-radius: 100% 100% 0 0;
+}
+
+.statsCard {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.statsIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #4FC3F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.calendarIcon {
+  font-size: 1.5rem;
+}
+
+.statsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.statsNumber {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1B1D21;
+}
+
+.statsText {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.notificationCard {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.notificationIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #FF9F43;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.emailIcon {
+  font-size: 1.5rem;
+}
+
+.notificationContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.notificationTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1B1D21;
+}
+
+.notificationText {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.profilesWrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  margin-top: 2rem;
+}
+
+.profileImage {
+  position: absolute;
+  width: 288px;
+  height: 444px;
+  border-radius: 144px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.profileImage:hover {
+  transform: translateY(-10px);
+}
+
+.classCard {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.classHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.classAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  object-fit: cover;
+}
+
+.classInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.className {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1B1D21;
+  margin-bottom: 0.25rem;
+}
+
+.classTime {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.joinButton {
+  background-color: #FF4081;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.joinButton:hover {
+  background-color: #F50057;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .heroContent {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .heroText {
+    max-width: 100%;
+    margin-bottom: 3rem;
+  }
+  
+  .buttonContainer {
+    justify-content: center;
+  }
+  
+  .heroImage {
+    justify-content: center;
+  }
+  
+  .imageContainer {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    padding: 3rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .heroContainer {
+    padding: 2.5rem 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .buttonContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .primaryButton, .secondaryButton {
+    width: 100%;
+  }
+  
+  .imageContainer {
+    transform: scale(0.8);
+    width: 240px;
+    height: 370px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageContainer {
+    transform: scale(0.7);
+  }
+} 

@@ -1,0 +1,47 @@
+.featuresContainer {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trustedContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.trustedTitle {
+  font-size: 1.25rem;
+  color: #6B7280;
+  margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+.logosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: clamp(120px, 10vw, 140px);
+  height: 60px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  filter: grayscale(1);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: scale(1.05);
+} 

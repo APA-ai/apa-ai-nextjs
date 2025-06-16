@@ -1,0 +1,83 @@
+.footerLinksContainer {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footerLinksContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  width: 40px;
+  height: 40px;
+}
+
+.logoText {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.linksContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.footerLink {
+  color: #666;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: var(--color-primary);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .footerLinksContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .linksContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerLinksContainer {
+    padding: 1.5rem 1rem;
+  }
+  
+  .logoText {
+    font-size: 1.25rem;
+  }
+  
+  .logoImage {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .linksContainer {
+    gap: 1rem;
+  }
+  
+  .footerLink {
+    font-size: 0.8rem;
+  }
+} 
