@@ -1,0 +1,437 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #F9FAFB;
+}
+
+.courseContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.courseTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+.courseContent {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .courseContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+.videoContainer {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  min-height: 500px;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoControls {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.controlButton {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.controlButton:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.videoTime {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.courseInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.courseDescription {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.courseDescription h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.courseDescription p {
+  color: #4B5563;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.accessButton {
+  background-color: #8B5CF6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.accessButton:hover {
+  background-color: #7C3AED;
+}
+
+.courseClasses {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.classItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+}
+
+.classItem:hover {
+  background-color: #F9FAFB;
+}
+
+.classNumber {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  color: #6B7280;
+  font-size: 0.9rem;
+}
+
+.classContent {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.classColor {
+  width: 3px;
+  height: 20px;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+}
+
+.classInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.classInfo h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.classInfo p {
+  font-size: 0.7rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.classDuration {
+  font-size: 0.7rem;
+  color: #6B7280;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.similarCoursesSection {
+  margin-bottom: 4rem;
+}
+
+.similarCoursesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .similarCoursesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .similarCoursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .similarCoursesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.courseCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.courseCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.courseImageContainer {
+  position: relative;
+  width: 100%;
+  height: 160px;
+}
+
+.courseImage {
+  object-fit: cover;
+}
+
+.courseCardContent {
+  padding: 1rem;
+}
+
+.courseCardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111827;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+
+.instructorInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.instructorAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  object-fit: cover;
+}
+
+.instructorName {
+  font-size: 0.875rem;
+  color: #4B5563;
+}
+
+.professorsSection {
+  margin-bottom: 4rem;
+}
+
+.professorsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.professorCard {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.professorImageContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.professorCard:nth-child(1) .professorImageContainer {
+  background-color: #10B981;
+}
+
+.professorCard:nth-child(2) .professorImageContainer {
+  background-color: #3B82F6;
+}
+
+.professorCard:nth-child(3) .professorImageContainer {
+  background-color: #F97316;
+}
+
+.professorCard:nth-child(4) .professorImageContainer {
+  background-color: #A855F7;
+}
+
+.professorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.professorName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #111827;
+}
+
+.professorTitle {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.aboutSection {
+  margin-bottom: 4rem;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: linear-gradient(to right, #EC4899, #312E81);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .aboutContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+.missionSection {
+  padding: 3rem;
+  background-color: #EC4899;
+  color: white;
+}
+
+.missionSection h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.missionSection p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.communitySection {
+  padding: 3rem;
+  background-color: #312E81;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.communitySection h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.communityIcon {
+  margin-bottom: 2rem;
+}
+
+.joinButton {
+  background-color: white;
+  color: #312E81;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.joinButton:hover {
+  background-color: #F3F4F6;
+}

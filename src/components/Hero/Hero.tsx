@@ -19,9 +19,6 @@ const Hero: React.FC = () => {
         <h1 className={styles.title}>
           Your AI Powered Learning <span className={styles.titleSpan}>Academy</span>
         </h1>
-        <p className={styles.subtitle}>
-          Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
-        </p>
         
         <div className={styles.categoryButtons}>
           <button className={styles.categoryButton}>AI coding</button>

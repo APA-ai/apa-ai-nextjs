@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Courses.module.css';
-import { recentImages } from '@/utils/imageImports';
+import { recentImages, profileImages } from '@/utils/imageImports';
 
 const Courses: React.FC = () => {
   // 课程数据
@@ -16,40 +17,136 @@ const Courses: React.FC = () => {
       instructor: {
         name: "Prashant Kumar Singh",
         role: "Software Developer",
-        avatar: "/avatars/instructor1.png"
+        avatar: profileImages.image1
       }
     },
     {
       id: 2,
-      title: "Beginner's Guide To Becoming An AI/ML Professional Developer",
+      title: "Advanced Machine Learning Techniques for Data Scientists",
       category: "TRENDING",
       image: recentImages.recent2,
       instructor: {
         name: "Prashant Kumar Singh",
         role: "Software Developer",
-        avatar: "/avatars/instructor1.png"
+        avatar: profileImages.image2
       }
     },
     {
       id: 3,
-      title: "Beginner's Guide To Becoming An AI/ML Professional Developer",
+      title: "Deep Learning and Neural Networks Fundamentals",
       category: "TRENDING",
       image: recentImages.recent3,
       instructor: {
         name: "Prashant Kumar Singh",
         role: "Software Developer",
-        avatar: "/avatars/instructor1.png"
+        avatar: profileImages.image3
       }
     },
     {
       id: 4,
-      title: "Beginner's Guide To Becoming An AI/ML Professional Developer",
+      title: "Natural Language Processing with Python and TensorFlow",
       category: "TRENDING",
       image: recentImages.recent4,
       instructor: {
         name: "Prashant Kumar Singh",
         role: "Software Developer",
-        avatar: "/avatars/instructor1.png"
+        avatar: profileImages.image4
+      }
+    }
+  ];
+
+  // Free Trailers 课程数据
+  const freeTrailerData = [
+    {
+      id: 5,
+      title: "Introduction to Computer Vision and Image Recognition",
+      category: "TRENDING",
+      image: recentImages.recent1,
+      instructor: {
+        name: "Prashant Kumar Singh",
+        role: "Software Developer",
+        avatar: profileImages.image1
+      }
+    },
+    {
+      id: 6,
+      title: "Reinforcement Learning for Game Development",
+      category: "TRENDING",
+      image: recentImages.recent2,
+      instructor: {
+        name: "Prashant Kumar Singh",
+        role: "Software Developer",
+        avatar: profileImages.image2
+      }
+    },
+    {
+      id: 7,
+      title: "Building Recommendation Systems with AI",
+      category: "TRENDING",
+      image: recentImages.recent3,
+      instructor: {
+        name: "Prashant Kumar Singh",
+        role: "Software Developer",
+        avatar: profileImages.image3
+      }
+    },
+    {
+      id: 8,
+      title: "AI Ethics and Responsible Machine Learning",
+      category: "TRENDING",
+      image: recentImages.recent4,
+      instructor: {
+        name: "Prashant Kumar Singh",
+        role: "Software Developer",
+        avatar: profileImages.image4
+      }
+    }
+  ];
+
+  // Online Class 课程数据
+  const onlineClassData = [
+    {
+      id: 9,
+      title: "Data Preprocessing and Feature Engineering",
+      category: "TRENDING",
+      image: recentImages.recent1,
+      instructor: {
+        name: "Prashant Kumar Singh",
+        role: "Software Developer",
+        avatar: profileImages.image1
+      }
+    },
+    {
+      id: 10,
+      title: "Time Series Forecasting with Machine Learning",
+      category: "TRENDING",
+      image: recentImages.recent2,
+      instructor: {
+        name: "Prashant Kumar Singh",
+        role: "Software Developer",
+        avatar: profileImages.image2
+      }
+    },
+    {
+      id: 11,
+      title: "AI for Healthcare and Medical Diagnostics",
+      category: "TRENDING",
+      image: recentImages.recent3,
+      instructor: {
+        name: "Prashant Kumar Singh",
+        role: "Software Developer",
+        avatar: profileImages.image3
+      }
+    },
+    {
+      id: 12,
+      title: "MLOps: Deploying and Scaling AI Models",
+      category: "TRENDING",
+      image: recentImages.recent4,
+      instructor: {
+        name: "Prashant Kumar Singh",
+        role: "Software Developer",
+        avatar: profileImages.image4
       }
     }
   ];
@@ -73,10 +170,10 @@ const Courses: React.FC = () => {
           
           <div className={styles.coursesGrid}>
             {courseData.map((course) => (
-              <div key={course.id} className={styles.courseCard}>
+              <Link href={`/course/${course.id}`} key={course.id} className={styles.courseCard}>
                 <div className={styles.courseImageContainer}>
                   <Image
-                    src={course.image.src}
+                    src={course.image}
                     alt={course.title}
                     fill
                     className={styles.courseImage}
@@ -96,7 +193,7 @@ const Courses: React.FC = () => {
                     <span className={styles.instructorName}>{course.instructor.name}</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -116,11 +213,11 @@ const Courses: React.FC = () => {
           </div>
           
           <div className={styles.coursesGrid}>
-            {courseData.map((course) => (
-              <div key={course.id} className={styles.courseCard}>
+            {freeTrailerData.map((course) => (
+              <Link href={`/course/${course.id}`} key={course.id} className={styles.courseCard}>
                 <div className={styles.courseImageContainer}>
                   <Image
-                    src={course.image.src}
+                    src={course.image}
                     alt={course.title}
                     fill
                     className={styles.courseImage}
@@ -140,7 +237,7 @@ const Courses: React.FC = () => {
                     <span className={styles.instructorName}>{course.instructor.name}</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -160,11 +257,11 @@ const Courses: React.FC = () => {
           </div>
           
           <div className={styles.coursesGrid}>
-            {courseData.map((course) => (
-              <div key={course.id} className={styles.courseCard}>
+            {onlineClassData.map((course) => (
+              <Link href={`/course/${course.id}`} key={course.id} className={styles.courseCard}>
                 <div className={styles.courseImageContainer}>
                   <Image
-                    src={course.image.src}
+                    src={course.image}
                     alt={course.title}
                     fill
                     className={styles.courseImage}
@@ -184,7 +281,7 @@ const Courses: React.FC = () => {
                     <span className={styles.instructorName}>{course.instructor.name}</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

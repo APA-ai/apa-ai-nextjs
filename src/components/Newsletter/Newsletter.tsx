@@ -3,14 +3,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './Newsletter.module.css';
-import { companyIcons } from '@/utils/imageImports';
 
 const Newsletter: React.FC = () => {
   const [email, setEmail] = useState('');
   const [selectedOption, setSelectedOption] = useState('Select');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const options = ['Teacher', 'Student', 'Parent', 'Other'];
+  const options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -27,29 +26,13 @@ const Newsletter: React.FC = () => {
   
   return (
     <section className={styles.newsletterContainer}>
-      <div className={styles.leftSection}>
-        <h2 className={styles.title}>Boost KS2 Results</h2>
-        <p className={styles.description}>
-          Nam at risus ullamcorper, fringilla purus in, placerat velit 
-          pellentesque efficitur sem et sem ultricies, sed consequat.
-        </p>
-        <button className={styles.demoButton}>Free Demo</button>
-        <div className={styles.leftDot}></div>
-      </div>
-
-      <div className={styles.centerIcon}>
-        <div className={styles.iconContainer}>
-          <Image 
-            src={companyIcons.icon1.src} 
-            alt="Newsletter Icon" 
-            width={60} 
-            height={60}
-            className={styles.icon}
-          />
+      <div className={styles.content}>
+        <div className={styles.logoContainer}>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 10L30 30H10L20 10Z" fill="white" />
+          </svg>
         </div>
-      </div>
-      
-      <div className={styles.rightSection}>
+        
         <h2 className={styles.title}>Join the Community</h2>
         <p className={styles.description}>
           Subscribe to our newsletter to keep up-to-date with the latest news.
@@ -89,7 +72,6 @@ const Newsletter: React.FC = () => {
           
           <button className={styles.subscribeButton}>Subscribe</button>
         </div>
-        <div className={styles.rightDot}></div>
       </div>
     </section>
   );

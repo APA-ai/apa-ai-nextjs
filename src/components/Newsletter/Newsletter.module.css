@@ -1,100 +1,82 @@
 .newsletterContainer {
-  display: flex;
+  background-color: #231445;
+  border-radius: 12px;
+  padding: 3rem 2rem;
   max-width: 1200px;
   margin: 4rem auto;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.leftSection {
-  background-color: #e45d8a;
-  padding: 3rem;
-  width: 50%;
-  position: relative;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.rightSection {
-  background-color: #231445;
-  padding: 3rem;
-  width: 50%;
-  position: relative;
+.logoContainer {
+  margin-bottom: 1.5rem;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #6366F1, #EC4899);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.leftSection .title {
   color: white;
-}
-
-.rightSection .title {
-  color: white;
+  margin-bottom: 0.75rem;
 }
 
 .description {
   font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.leftSection .description {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.rightSection .description {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.demoButton {
-  background-color: #ffd166;
-  color: #333;
-  border: none;
-  border-radius: 50px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.demoButton:hover {
-  background-color: #ffda85;
-  transform: translateY(-2px);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
 }
 
 .formContainer {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
 }
 
 .emailInput {
   flex: 1;
-  min-width: 200px;
   padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
+  border: none;
+  border-radius: 30px;
   background-color: white;
   color: #333;
   font-size: 0.9rem;
   outline: none;
+  height: 48px;
 }
 
 .selectContainer {
   position: relative;
-  min-width: 120px;
+  width: 120px;
 }
 
 .selectButton {
   width: 100%;
-  padding: 0.75rem 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 30px;
   background-color: white;
   color: #333;
   font-size: 0.9rem;
@@ -103,11 +85,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 48px;
 }
 
 .arrow {
   font-size: 0.7rem;
   margin-left: 0.5rem;
+  color: #666;
 }
 
 .dropdown {
@@ -123,7 +107,7 @@
 }
 
 .dropdownItem {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -133,82 +117,35 @@
 }
 
 .subscribeButton {
-  background-color: #ffd166;
-  color: #333;
+  background-color: #F59E0B;
+  color: white;
   border: none;
-  border-radius: 50px;
-  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  padding: 0.75rem 1.5rem;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  height: 48px;
 }
 
 .subscribeButton:hover {
-  background-color: #ffda85;
-  transform: translateY(-2px);
-}
-
-.centerIcon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-.iconContainer {
-  width: 80px;
-  height: 80px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.icon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-.leftDot {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  border-radius: 50%;
-  opacity: 0.5;
-}
-
-.rightDot {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  width: 15px;
-  height: 15px;
-  background-color: #ffd166;
-  border-radius: 50%;
+  background-color: #D97706;
 }
 
 @media (max-width: 768px) {
-  .newsletterContainer {
+  .formContainer {
     flex-direction: column;
   }
   
-  .leftSection, 
-  .rightSection {
+  .selectContainer {
     width: 100%;
   }
   
-  .centerIcon {
-    top: 50%;
-    left: 1.5rem;
-    transform: translateY(-50%);
+  .emailInput, 
+  .selectButton, 
+  .subscribeButton {
+    width: 100%;
   }
 } 

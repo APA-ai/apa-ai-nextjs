@@ -53,12 +53,12 @@ const Header: React.FC = () => {
       </div>
       
       <div className={styles.authButtons}>
-        <Link href="/signup" className={styles.signUpButton}>
+        {/* <Link href="/signup" className={styles.signUpButton}>
           Sign Up
         </Link>
         <Link href="/login" className={styles.loginButton}>
           Login
-        </Link>
+        </Link> */}
       </div>
     </header>
   );
