@@ -89,7 +89,7 @@ const Testimonials: React.FC = () => {
                   src={testimonialImages.testimonial3.src} 
                   alt="Snow Montemayor" 
                   width={48} 
-                  height={48}  
+                  height={48}   
                   className={styles.authorImage}
                 />
               </div>
