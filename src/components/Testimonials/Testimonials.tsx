@@ -81,7 +81,7 @@ const Testimonials: React.FC = () => {
           <div className={styles.testimonialCard}>
             <div className={styles.quoteIcon}>"</div>
             <p className={styles.testimonialText}>
-              Maven was so much easier to navigate than previous course platforms. It helped me reinforce my learning, keep track of organization, and enabled me to do live problem solving with other finance leaders.
+             APA was so much easier to navigate than previous course platforms. It helped me reinforce my learning, keep track of organization, and enabled me to do live problem solving with other finance leaders.
             </p>
             <div className={styles.testimonialAuthor}>
               <div className={styles.authorImageContainer}>
@@ -141,7 +141,7 @@ const Testimonials: React.FC = () => {
           <div className={styles.testimonialCard}>
             <div className={styles.quoteIcon}>"</div>
             <p className={styles.testimonialText}>
-              Taking a Maven course felt like getting onboarded into a new company. The logistics were smooth and seamless, the lectures were professional and valuable and the instructors were engaged and helpful.
+              Taking a APA course felt like getting onboarded into a new company. The logistics were smooth and seamless, the lectures were professional and valuable and the instructors were engaged and helpful.
             </p>
             <div className={styles.testimonialAuthor}>
               <div className={styles.authorImageContainer}>
