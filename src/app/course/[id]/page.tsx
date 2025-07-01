@@ -1,16 +1,12 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import { profileImages, recentImages } from '@/utils/imageImports';
-
-export const metadata: Metadata = {
-  title: 'Course Detail - APA.AI',
-  description: 'Course detail page for APA.AI',
-};
 
 export default function CourseDetailPage({ params }: { params: { id: string } }) {
   // Mock data for the course
@@ -93,19 +89,27 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
         
         <div className={styles.courseContent}>
           <div className={styles.videoContainer}>
-            <div className={styles.videoWrapper}>
+            <Link href="/subscription" className={styles.videoWrapper}>
+              <div className={styles.videoOverlay}>
+                <div className={styles.playButton}>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 5V19L17 12L7 5Z" fill="white"/>
+                  </svg>
+                </div>
+                <div className={styles.upgradeText}>Click to upgrade and watch full video</div>
+              </div>
               <div className={styles.videoControls}>
-                <button className={styles.controlButton}>
+                <button className={styles.controlButton} onClick={(e) => e.preventDefault()}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 5L7 12L17 19V5Z" fill="white"/>
                   </svg>
                 </button>
-                <button className={styles.controlButton}>
+                <button className={styles.controlButton} onClick={(e) => e.preventDefault()}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 5H6V19H8V5ZM18 5H16V19H18V5Z" fill="white"/>
                   </svg>
                 </button>
-                <button className={styles.controlButton}>
+                <button className={styles.controlButton} onClick={(e) => e.preventDefault()}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 5V19L17 12L7 5Z" fill="white"/>
                   </svg>
@@ -115,14 +119,14 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                 <span>{courseData.currentTime} / {courseData.totalTime}</span>
                 <span>GTM workshop</span>
               </div>
-            </div>
+            </Link>
           </div>
           
           <div className={styles.courseInfo}>
             <div className={styles.courseDescription}>
               <h2>Introduction</h2>
               <p>{courseData.description}</p>
-              <button className={styles.accessButton}>Access To Full Class Video</button>
+              <Link href="/subscription" className={styles.accessButton}>Access To Full Class Video</Link>
             </div>
             
             <div className={styles.courseClasses}>

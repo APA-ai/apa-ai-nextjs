@@ -170,7 +170,7 @@ const Courses: React.FC = () => {
           
           <div className={styles.coursesGrid}>
             {courseData.map((course) => (
-              <Link href={`/course/${course.id}`} key={course.id} className={styles.courseCard}>
+              <Link href="/subscription" key={course.id} className={styles.courseCard}>
                 <div className={styles.courseImageContainer}>
                   <Image
                     src={course.image}
